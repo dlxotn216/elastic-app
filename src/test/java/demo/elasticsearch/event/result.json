@@ -1,0 +1,65 @@
+{
+  "took": 7,
+  "timed_out": false,
+  "_shards": {
+    "total": 5,
+    "successful": 5,
+    "skipped": 0,
+    "failed": 0
+  },
+  "hits": {
+    "total": 3,
+    "max_score": 1.0,
+    "hits": [
+      {
+        "_index": "appdemo",
+        "_type": "applicationevent",
+        "_id": "amxM2WoBmIesgR2XrxwE",
+        "_score": 1.0,
+        "_source": {
+          "id": null,
+          "applicationName": "CTMS",
+          "hostIp": "192.168.11.56",
+          "eventAt": "2019-05-21T16:31:17.637"
+        }
+      },
+      {
+        "_index": "appdemo",
+        "_type": "applicationevent",
+        "_id": "aGxI2WoBmIesgR2X-Bxx",
+        "_score": 1.0,
+        "_source": {
+          "id": null,
+          "applicationName": "CTMS",
+          "hostIp": "192.168.11.56",
+          "eventAt": "2019-05-21T16:27:14.310"
+        }
+      },
+      {
+        "_index": "appdemo",
+        "_type": "applicationevent",
+        "_id": "aWxJ2WoBmIesgR2X6xxD",
+        "_score": 1.0,
+        "_source": {
+          "id": null,
+          "applicationName": "CTMS",
+          "hostIp": "192.168.11.56",
+          "eventAt": "2019-05-21T16:28:16.390"
+        }
+      }
+    ]
+  }
+},
+
+{
+  "query": {
+    "match": {
+      "eventAt": "2019-05-21"
+    }
+  },
+  "highlight": {
+    "fields": {
+      "eventAt": {}
+    }
+  }
+}  
